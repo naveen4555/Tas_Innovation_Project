@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tea Leaves Disease Detection</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/w3.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/w3-theme-black.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/font-awesome.min.css') }}">
+    <style>
+        body {
+            font-family: "Montserrat", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("{{ url_for('static', filename='/images/pritindra-das-hIY-acW8e3w-unsplash.jpg') }}");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.6);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 40px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 16px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 32px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+        }
+
+        .w3-button {
+            font-size: 20px;
+            padding: 10px 20px;
+            border-radius: 4px;
+        }
+
+        .w3-button:hover {
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <!-- Navbar -->
+        <div class="w3-top">
+            <div class="w3-bar w3-theme-d2 w3-left-align">
+                <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+                <a href="/" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>TEA LEAVES DISEASE DETECTION</a>
+                <a href="/about" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="w3-content" style="max-width:1500px">
+            <!-- Header -->
+            <header class="w3-center w3-margin-bottom">
+                <h1><b>OUR PROJECT ON TEA LEAVES DISEASE</b></h1>
+                <p><b>Tea leaves pictures can be used for the prediction of various tea leaves diseases which causes huge loss in the agricultural system every year. The proposed system, Tea Leaves Image Processing System, helps in the analysis of leaves and thereby helps in predicting various leaf diseases. The input to the proposed system is the Tea Leaves Image. The leaves portion is segmented and leaves color, shape, and texture features are extracted and taken together to form a feature vector, and then the analysis of leaves is done, which is used for the diagnosis of various tea leaves diseases. This proposed system will help farmers in the early diagnosis of diseases.</b></p>
+                <p class="w3-padding-16"><a class="w3-button w3-black" href="/predict">Predict</a></p>
+            </header>
+        </div>
+    </div>
+</body>
+</html>

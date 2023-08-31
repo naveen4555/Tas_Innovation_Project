@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>About</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="{{ url_for('static', filename='/css/w3.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='/css/w3-theme-black.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='/css/font-awesome.min.css') }}">
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+}
+</style>
+</head>
+<body style="background-color:#CDFFCD;>
+
+<!-- Navbar -->
+<div class="w3-top">
+    <div class="w3-bar w3-theme-d2 w3-left-align">
+     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+     <a href="/" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>TEA LEAVES DISEASEDETECTION</a>
+     <a href="/leaf" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Leaf</a>
+    </div>
+   </div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px">
+
+  <!-- About Section -->
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="{{ url_for('static', filename='/images/rashid-New8EgKnSds-unsplash.jpg') }}" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">About Tea Leaves</h1><br>
+      <p class="w3-large">Tea is an important economic crop. It contains a variety of effective ingredients required by the human body, has medical and health care functions, and is quite effective in enhancing human immunity. Planting tea is an important way for tea farmers to make their fortunes. Currently,China's tea planting area and output are the highest in the world. However, because of the effects of many diseases, such as tea algae leaf spot (TALS),tea bud blight (TBB), tea white scab (TWS), and tea leaf blight (TLB), the annual tea production has been reduced by as much as 20% 1. Tea leaf diseases can also reduce the quality of tea and cause serious economic losses to tea farmers. Accurate detection and identiication of tea leaf diseases and timely prevention and control measures are of great significance to reduce the loss of tea production, improve the quality of tea, and increase the income of tea farmers.</p>
+    </div>
+  </div>
+</div>  
+  
+
+</body>
+</html>

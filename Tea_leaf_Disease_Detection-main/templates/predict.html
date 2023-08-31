@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tea Leaf Disease Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/w3.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/w3-theme-black.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/font-awesome.min.css') }}">
+    <style>
+        body {
+            background-color: #CDFFCD;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        form {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        input[type="file"] {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 4px;
+            border: 2px solid #4CAF50;
+            background-color: #fff;
+            color: #4CAF50;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="submit"] {
+            display: block;
+            margin: 0 auto;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        h2 {
+            color: #4CAF50;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            margin-right: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body >
+
+    <!-- Navbar -->
+<div class="w3-top">
+    <div class="w3-bar w3-theme-d2 w3-left-align">
+     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+     <a href="/" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>TEA LEAVES DISEASEDETECTION</a>
+     <a href="/about" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+     <a href="/leaf" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Leaf</a>
+    </div>
+   </div>
+
+
+    <h1>Tea Leaf Disease Prediction</h1>
+    <form action="/predict" method="post" enctype="multipart/form-data">
+        <input type="file" name="image">
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+        <h2>Prediction Result: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
